@@ -12,3 +12,5 @@ This fuses the weight of the selected bones with the weight of their parents and
 
 Remove Unweighted Tail Bones:
 Remove unweighted bones that do not have any child bone, so they are useless.
+
+More to add...
