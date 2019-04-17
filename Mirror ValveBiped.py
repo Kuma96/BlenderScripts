@@ -46,7 +46,7 @@ def mirror_valvebiped():
 		current_object.data.edit_bones[b[0]].tail.x = -current_object.data.edit_bones[b[1]].tail.x
 		current_object.data.edit_bones[b[0]].tail.y = current_object.data.edit_bones[b[1]].tail.y
 		current_object.data.edit_bones[b[0]].tail.z = current_object.data.edit_bones[b[1]].tail.z
-		current_object.data.edit_bones[b[0]].roll = (pi - current_object.data.edit_bones[b[1]].roll)%pi
+		current_object.data.edit_bones[b[0]].roll = (pi - current_object.data.edit_bones[b[1]].roll)%(2*pi)
 
 def main():
 	print("--Mirror ValveBiped (START)--")
