@@ -40,6 +40,11 @@ def mirror_valvebiped():
 	]
 	
 	for b in bones:
+		if current_object.data.edit_bones.get(b[0]) is None:
+			continue
+		if current_object.data.edit_bones.get(b[1]) is None:
+			continue
+		
 		current_object.data.edit_bones[b[0]].head.x = -current_object.data.edit_bones[b[1]].head.x
 		current_object.data.edit_bones[b[0]].head.y = current_object.data.edit_bones[b[1]].head.y
 		current_object.data.edit_bones[b[0]].head.z = current_object.data.edit_bones[b[1]].head.z
