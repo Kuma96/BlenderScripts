@@ -49,6 +49,9 @@ def make_lods():
 			bpy.ops.object.duplicate()
 			obj.select = False
 			
+			if bpy.context.scene.objects.active.data.shape_keys is not None:
+				bpy.ops.object.shape_key_remove(all = True)
+			
 			modifier = bpy.context.scene.objects.active.modifiers.new("Make LOD", type = "DECIMATE")
 			modifier.decimate_type = 'COLLAPSE'
 			modifier.ratio = level
